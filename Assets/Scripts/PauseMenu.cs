@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public Button BotonPrincipal;
     public GameObject PanelOpciones;
     private bool menuAbierto = false;
 
@@ -25,6 +27,7 @@ public class PauseMenu : MonoBehaviour
 
     public void AbrirMenuOpciones()
     {
+        BotonPrincipal.Select();
         menuAbierto = true;
         Time.timeScale = 0;
         PanelOpciones.SetActive(true);
