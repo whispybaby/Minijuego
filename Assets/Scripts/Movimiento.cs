@@ -5,41 +5,39 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 
 {
-private Rigidbody2D rb;
-public int Speed;
-public int JumpSpeed;
-public Transform GroundCheckTransform;
-public float GroundCheckRadius;
-public LayerMask GroundMask;
-public Vector2 StartingPosition;
-    //minisculas privadas y mayusculas publicas
+    private Rigidbody2D rb;
+    private BoxCollider2D bc;
+    public int Velocidad;
+    public int VelocidadSalto;
+    public LayerMask CapaPiso;
+    public Vector2 PosicionInicial;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bc = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-    //Si pulsamos  Horizontal va a moverse en Horizontal
-        float mover = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(mover * Speed ,rb.velocity.y );
-        
-        if (Input.GetButtonDown("Jump") && onGround())
+        float movimiento = Input.GetAxis("Horizontal") * Velocidad;
+        rb.velocity = new Vector2(movimiento, rb.velocity.y);
+
+        if (Input.GetButtonDown("Jump") && enElPiso())
         {
             rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * JumpSpeed, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * VelocidadSalto, ForceMode2D.Impulse);
         }
-    
+
     }
-    public void resetPosition()
+    public void reiniciarPosicion()
     {
         rb.velocity = Vector2.zero;
-        transform.position = StartingPosition;
+        transform.position = PosicionInicial;
     }
-    bool onGround()
+
+    private bool enElPiso()
     {
-        return Physics2D.OverlapCircle(GroundCheckTransform.position, GroundCheckRadius, GroundMask);
+        return Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0, Vector2.down, 0.1f, CapaPiso);
     }
 }
-//rb.velocity.yprivate Rigidbody2D rb;
