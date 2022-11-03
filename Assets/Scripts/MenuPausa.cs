@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class MenuPausa : MonoBehaviour
 {
     public Button BotonPrincipal;
     public GameObject PanelOpciones;
