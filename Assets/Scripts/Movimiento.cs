@@ -40,4 +40,12 @@ public class Movimiento : MonoBehaviour
     {
         return Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0, Vector2.down, 0.1f, CapaPiso);
     }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject.CompareTag("DobleSalto") && Input.GetButton("Jump"))
+        {
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * VelocidadSalto * 60);
+        }
+    }
 }
