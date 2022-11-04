@@ -8,6 +8,10 @@ public class Diamante : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // Llamar al evento, ejecutará todos los métodos suscritos.
+            GestorEventos.IniciarEventoObtenerDiamante();
+
+            // Eliminar el objeto actual de la escena.
             Destroy(gameObject);
         }
     }
