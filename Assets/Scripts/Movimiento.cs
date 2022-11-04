@@ -28,12 +28,6 @@ public class Movimiento : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * VelocidadSalto, ForceMode2D.Impulse);
         }
-
-    }
-    public void reiniciarPosicion()
-    {
-        rb.velocity = Vector2.zero;
-        transform.position = PosicionInicial;
     }
 
     private bool enElPiso()

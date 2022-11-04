@@ -13,14 +13,10 @@ public class ContadorDiamantes : MonoBehaviour
         GestorEventos.EventoObtenerDiamante += aumentarDiamantes;
     }
 
-    void Update()
-    {
-        Diamantes.text = diamantesConseguidos.ToString();
-    }
-
     private void aumentarDiamantes()
     {
         diamantesConseguidos += 1;
+        Diamantes.text = diamantesConseguidos.ToString();
     }
 
     private void OnDestroy()
