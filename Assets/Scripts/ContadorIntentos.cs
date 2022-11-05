@@ -8,7 +8,7 @@ public class ContadorIntentos : MonoBehaviour
     public TMP_Text Intentos;
     private int intentosActuales = 0;
 
-    void Start()
+    private void Awake()
     {
         GestorEventos.EventoMuerteJugador += aumentarIntentos;
     }
