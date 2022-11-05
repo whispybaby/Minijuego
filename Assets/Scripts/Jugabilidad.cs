@@ -9,12 +9,10 @@ public class Jugabilidad : MonoBehaviour
     public Vector2 PosicionInicial;
 
     private void Awake() {
-        GestorEventos.EventoCompletarNivel += completarNivel;
         GestorEventos.EventoMuerteJugador += proximoIntento;
     }
 
     private void OnDestroy() {
-        GestorEventos.EventoCompletarNivel -= completarNivel;
         GestorEventos.EventoMuerteJugador -= proximoIntento;
     }
 
@@ -27,11 +25,5 @@ public class Jugabilidad : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         transform.position = PosicionInicial;
-    }
-
-    private void completarNivel()
-    {
-        // Incluir más información
-        SceneManager.LoadScene("MenuPrincipal");
     }
 }

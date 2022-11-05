@@ -6,7 +6,11 @@ using TMPro;
 public class ContadorDiamantes : MonoBehaviour
 {
     public TMP_Text Diamantes;
-    private int diamantesConseguidos = 0;
+    public static int DiamantesConseguidos { get; private set; } = 0;
+
+    private void Start() {
+        DiamantesConseguidos = 0;
+    }
 
     private void Awake()
     {
@@ -16,14 +20,14 @@ public class ContadorDiamantes : MonoBehaviour
 
     private void aumentarDiamantes()
     {
-        diamantesConseguidos += 1;
-        Diamantes.text = diamantesConseguidos.ToString();
+        DiamantesConseguidos += 1;
+        Diamantes.text = DiamantesConseguidos.ToString();
     }
 
     private void reiniciarDiamantes()
     {
-        diamantesConseguidos = 0;
-        Diamantes.text = diamantesConseguidos.ToString();
+        DiamantesConseguidos = 0;
+        Diamantes.text = DiamantesConseguidos.ToString();
     }
 
     private void OnDestroy()

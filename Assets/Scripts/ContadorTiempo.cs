@@ -6,23 +6,33 @@ using TMPro;
 public class ContadorTiempo : MonoBehaviour
 {
     public TMP_Text Contador;
-    private float tiempo = 0;
-    private float tiempoTotal = 0;
+    public static float Tiempo { get; private set; } = 0;
+    public static float TiempoTotal { get; private set; } = 0;
 
     private void Awake()
     {
         GestorEventos.EventoMuerteJugador += aumentarTiempoTotal;
     }
 
+    private void Start() {
+        Tiempo = 0;
+        TiempoTotal = 0;
+    }
+
+    private void OnDestroy()
+    {
+        GestorEventos.EventoMuerteJugador -= aumentarTiempoTotal;
+    }
+
     private void aumentarTiempoTotal()
     {
-        tiempoTotal += tiempo;
-        tiempo = 0;
+        TiempoTotal += Tiempo;
+        Tiempo = 0;
     }
 
     void Update()
     {
-        tiempo += Time.deltaTime;
-        Contador.text = tiempo.ToString("f0");
+        Tiempo += Time.deltaTime;
+        Contador.text = Tiempo.ToString("f0");
     }
 }

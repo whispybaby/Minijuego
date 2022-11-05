@@ -9,18 +9,36 @@ public class MenuPausa : MonoBehaviour
     public Button BotonPrincipal;
     public GameObject PanelOpciones;
     private bool menuAbierto = false;
+    private bool puedePausar = true;
+
+    private void Awake()
+    {
+        GestorEventos.EventoCompletarNivel += desactivarPausado;
+    }
+
+    private void OnDestroy() {
+        GestorEventos.EventoCompletarNivel -= desactivarPausado;
+    }
+
+    private void desactivarPausado()
+    {
+        puedePausar = false;
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (puedePausar)
         {
-            if (menuAbierto)
+            if (Input.GetButtonDown("Cancel"))
             {
-                CerrarMenuOpciones();
-            }
-            else
-            {
-                AbrirMenuOpciones();
+                if (menuAbierto)
+                {
+                    CerrarMenuOpciones();
+                }
+                else
+                {
+                    AbrirMenuOpciones();
+                }
             }
         }
     }

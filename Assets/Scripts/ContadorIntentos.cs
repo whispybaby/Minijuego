@@ -6,7 +6,11 @@ using TMPro;
 public class ContadorIntentos : MonoBehaviour
 {
     public TMP_Text Intentos;
-    private int intentosActuales = 0;
+    public static int IntentosActuales { get; private set; } = 0;
+
+    private void Start() {
+        IntentosActuales = 0;
+    }
 
     private void Awake()
     {
@@ -15,8 +19,8 @@ public class ContadorIntentos : MonoBehaviour
 
     private void aumentarIntentos()
     {
-        intentosActuales += 1;
-        Intentos.text = intentosActuales.ToString();
+        IntentosActuales += 1;
+        Intentos.text = IntentosActuales.ToString();
     }
 
     private void OnDestroy()
