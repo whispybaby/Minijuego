@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Diamante : MonoBehaviour
 {
+    private void Awake() {
+        GestorEventos.EventoMuerteJugador += reinvocarDiamante;
+    }
+
+    private void reinvocarDiamante()
+    {
+        gameObject.SetActive(true);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -11,8 +20,8 @@ public class Diamante : MonoBehaviour
             // Llamar al evento, ejecutará todos los métodos suscritos.
             GestorEventos.IniciarEventoObtenerDiamante();
 
-            // Eliminar el objeto actual de la escena.
-            Destroy(gameObject);
+            // Ocultar el objeto actual de la escena.
+            gameObject.SetActive(false);
         }
     }
 }
