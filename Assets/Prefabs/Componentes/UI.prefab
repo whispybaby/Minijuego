@@ -147,9 +147,10 @@ GameObject:
   - component: {fileID: 5199727550140716696}
   - component: {fileID: 3497269488072310292}
   - component: {fileID: 8201557208125429671}
-  - component: {fileID: 1005605344952127696}
-  - component: {fileID: 6228424832633930668}
-  - component: {fileID: 7571207666352699069}
+  - component: {fileID: 149871673524515005}
+  - component: {fileID: 7496718582029599184}
+  - component: {fileID: 2260766276151248445}
+  - component: {fileID: 2238033643291327181}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -246,7 +247,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1005605344952127696
+--- !u!114 &149871673524515005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,37 +256,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 2555418187098921822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a9b4f2151fc1834bbefff9eab88029, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a0e0220ac5056b25b888a684345e8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Diamantes: {fileID: 820031126061879079}
+--- !u!114 &7496718582029599184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555418187098921822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c228eafd64786ecdf835bce161b8c46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Intentos: {fileID: 6195927394034314380}
+--- !u!114 &2260766276151248445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555418187098921822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110c85d1b48ac65f28ecb71b0c7fdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Contador: {fileID: 5974744686560468278}
+--- !u!114 &2238033643291327181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555418187098921822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8be34485ebd8fda08a88edf88c126e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BotonPrincipal: {fileID: 7204909373726587529}
   PanelOpciones: {fileID: 2792571499036750216}
---- !u!114 &6228424832633930668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2555418187098921822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5d3cdbdc825cb9a8d7bcc077e9e948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Contador: {fileID: 5974744686560468278}
---- !u!114 &7571207666352699069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2555418187098921822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb6fe964c99d830685291cd1c62bdb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Diamantes: {fileID: 820031126061879079}
 --- !u!1 &2792571499036750216
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +311,6 @@ GameObject:
   - component: {fileID: 8295539781160515730}
   - component: {fileID: 2015400429418655109}
   - component: {fileID: 4454379950767470839}
-  - component: {fileID: 828400136699955072}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -365,20 +378,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &828400136699955072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2792571499036750216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a9b4f2151fc1834bbefff9eab88029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BotonPrincipal: {fileID: 7204909373726587529}
-  PanelOpciones: {fileID: 2792571499036750216}
 --- !u!1 &2916242378111223145
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +500,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1005605344952127696}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: AbrirMenuOpciones
         m_Mode: 1
@@ -711,7 +710,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1005605344952127696}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: CerrarMenuOpciones
         m_Mode: 1
@@ -1440,7 +1439,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1005605344952127696}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
         m_MethodName: IrAlMenuPrincipal
         m_Mode: 1
