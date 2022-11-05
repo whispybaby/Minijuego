@@ -10,7 +10,6 @@ public class Movimiento : MonoBehaviour
     public int Velocidad;
     public int VelocidadSalto;
     public LayerMask CapaPiso;
-    public Vector2 PosicionInicial;
 
     void Start()
     {
