@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7727151563770538540}
   - component: {fileID: 7727151563770538541}
   - component: {fileID: 7852308587679469942}
-  - component: {fileID: 6486857434994815951}
   - component: {fileID: 4802848566626717557}
   m_Layer: 0
   m_Name: Enemigo
@@ -28,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7727151563770538542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.8098, y: -0.9510002, z: 0}
-  m_LocalScale: {x: 0.02799159, y: 0.02789783, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,18 +47,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.47162437, y: 1.5974102}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 34.64, y: 34.64}
+    oldSize: {x: 1.6914062, y: 1.6914062}
     newSize: {x: 34.64, y: 34.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 25.080719, y: 35.500378}
+  m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &7852308587679469942
 SpriteRenderer:
@@ -113,26 +112,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6486857434994815951
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7727151563770538542}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ee489be8995095cb8ae242a13b91399, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4802848566626717557
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6479777008499401123}
   - component: {fileID: 6151927491470811044}
-  - component: {fileID: 3609185192239992215}
+  - component: {fileID: 1162823788647311811}
   m_Layer: 3
   m_Name: Gran piso
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5616235529546966794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15542194, y: 0.21661824, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3609185192239992215
+--- !u!61 &1162823788647311811
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,16 +98,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.11419392}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 34.64, y: 34.64}
+    oldSize: {x: 3.3828125, y: 3.3828125}
     newSize: {x: 34.64, y: 34.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.64, y: 25.504354}
+  m_Size: {x: 3.35, y: 2.5}
   m_EdgeRadius: 0

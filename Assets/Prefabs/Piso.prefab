@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6229833061039914080}
   - component: {fileID: 1220073443745554621}
-  - component: {fileID: 5103154273167153344}
+  - component: {fileID: 294038354240963726}
   m_Layer: 3
   m_Name: Piso
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5058808410043301786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.13608207, y: 0.068301395, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5103154273167153344
+--- !u!61 &294038354240963726
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,16 +98,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2710762, y: 1.1080832}
+  m_Offset: {x: 0, y: 0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 34.64, y: 34.64}
+    oldSize: {x: 1.6914062, y: 1.6914062}
     newSize: {x: 34.64, y: 34.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 33.528908, y: 10.468917}
+  m_Size: {x: 1.6, y: 0.5}
   m_EdgeRadius: 0
