@@ -22,10 +22,21 @@ public class Movimiento : MonoBehaviour
         float movimiento = Input.GetAxis("Horizontal") * Velocidad;
         rb.velocity = new Vector2(movimiento, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && enElPiso())
+        if (enElPiso())
         {
-            rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * VelocidadSalto, ForceMode2D.Impulse);
+            if (Input.GetButtonDown("Jump"))
+            {
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * VelocidadSalto, ForceMode2D.Impulse);
+            }
+        }
+        else
+        {
+            float movimientoVertical = Input.GetAxis("Vertical") / 10;
+            if (movimientoVertical < 0)
+            {
+                rb.AddForce(Vector2.up * movimientoVertical, ForceMode2D.Impulse);
+            }
         }
     }
 
@@ -34,7 +45,8 @@ public class Movimiento : MonoBehaviour
         return Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0, Vector2.down, 0.1f, CapaPiso);
     }
 
-    private void OnTriggerStay2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other)
+    {
         if (other.gameObject.CompareTag("DobleSalto") && Input.GetButton("Jump"))
         {
             rb.velocity = Vector2.zero;
